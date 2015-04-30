@@ -16,7 +16,7 @@
         tab.push(binded);
         
         return function() {
-            var count = event.indexOf(bind);
+            var count = event.indexOf(binded);
             if (count > -1) {
                 event.splice(count, 1);
             }
