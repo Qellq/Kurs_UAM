@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>MVC</title>
+  <link rel="stylesheet" type="text/css" href= "style.css">
+  <meta charset="UTF-8">
+</head>
+	<body>
+    <div id = "listWrapper">
+      <h1>TODO list</h1>
+        <ul id = "tasks">
+        </ul>
+		<div id = "addTask">
+        <input type="text" name="newtask" id="newtask" val="" /> <span class="add" id="add">Dodaj</span>
+      </div>
+        <div id="footer" class="statistics">
+          Liczba zadań: <span id="totalTasks" class="number">0</span><br/>
+          Zrobione zadania: <span id="doneTasks" class="number">0</span><br/>
+          Pozostałe zadania: <span id="leftTasks" class="number">0</span>
+        </div>
+    </div>
+<script src="js/eventEmitter.js"></script>
+<script src="js/utils.js"></script>
+<script src="js/listView.js"></script>
+<script src="js/inputView.js"></script>
+<script src="js/footerView.js"></script>
+<script src="js/listController.js"></script>
+<script src="js/inputController.js"></script>
+<script src="js/footerController.js"></script>
+<script src="js/model.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>

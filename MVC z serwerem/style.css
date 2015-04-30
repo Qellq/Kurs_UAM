@@ -1,0 +1,13 @@
+body{background:#336600;font-family:Verdana;font-size:12px;}
+h1{color:#000000;text-transform:uppercase;font-size:20px;text-align:center;}
+#listWrapper {width:420px;margin:auto;padding:auto;}
+ul {list-style:none;padding:0;margin:0}
+li {padding-left:10px;backgroud:#fff;height:30px;line-height:30px;background:#F0F7DA;border-top:1px #000 solid;transition: background 0.5s;}
+li:hover {background: #FF9900;cursor:pointer;}
+input {height:30px;width:350px;margin:0px;border:0px;font-size:12px;font-family:Verdana;padding: 0 10px;}
+input:focus{outline:none}
+.add, .delete{display:block;height:30px;text-align:center;line-height:30px;width:50px;cursor:pointer;padding:0;color:#000000;float:right}
+.add {background:#3366FF;}
+.done{background:#FF0000;text-decoration: line-through;}
+.statistics{text-align:center;margin-top:20px;color:#000000;}
+.none{display:none}
