@@ -11,24 +11,23 @@
         if (!this.listeners[eventName]) {
             this.listeners[eventName] = [];
         }
-        var event = this.listeners[eventName];
-        var binded = listener.bind(context);
-        tab.push(binded);
-        
+        var tab = this.listeners[eventName];
+        var bind = listener.bind(context);
+        tab.push(bind);
         return function() {
-            var count = event.indexOf(binded);
+            var count = tab.indexOf(bind);
             if (count > -1) {
-                event.splice(count, 1);
+                tab.splice(count, 1);
             }
         };
     };
     EE.prototype.emit = function(eventName /*, other args...*/ ) {
         var args = [];
-        for (var a = 1; a < arguments.length; a++) {
+        for (var i = 1; i < arguments.length; i++) {
             args.push(arguments[i]);
         }
-        for (var a in this.listeners[eventName]) {
-            this.listeners[eventName][a].apply(this, args);
+        for (var i in this.listeners[eventName]) {
+            this.listeners[eventName][i].apply(this, args);
         }
     };
     global.UAM.EventEmitter = EE;
